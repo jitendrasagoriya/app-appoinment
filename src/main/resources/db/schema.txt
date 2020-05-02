@@ -1,0 +1,29 @@
+Docter Table
+	1) Id 			String		Primery Key
+	2) Name 		String		Not Null 
+	3) Hopistal 	String		Null
+	4) Degree		String		Not Null
+	5) Specilest	String		Not Null
+	6) Address		String 		Not Null
+	7) Mobile		String		Null
+	8) LandLine		Stirng		Not Null
+	9) appOnPhone	Boolean 	Not Null Default false
+	10 isEmailSent	Boolean		Not Null Default false
+	11)isSmsSent	Boolean		Not Null Default false
+	12)isActive		Boolean		Not Null Default true
+    13)creationDate Timestammp	Not Null Default SystemDate	
+	14)lastModified Timestammp	Not Null Default SystemDate
+	
+Shift Table
+	1) Id 			Long		Primery Key
+	2) DrId 		String		Forign Key (Doctor Table)
+	3) shiftTime 	String		Not Null
+	
+	
+Tokens Table
+	1) Id 			Long		Primery Key
+	2) DrId 		String		Forign Key (Doctor Table)
+	3) ShiftId 		Long		Forign Key (Shift Table)
+	4) tokenDate	Date		Not Null
+	5) currentToken	Number		Not Null
+	6) MaxTOken		Number		Not Null
